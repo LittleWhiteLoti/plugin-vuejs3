@@ -1,15 +1,16 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <span v-bold="'bold'">Ignore the screen content. Look at the web console to verify the global plugin is working</span>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  created() {
+    // Call global method sayHello
+    this.$sayHello();
   }
 }
 </script>

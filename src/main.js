@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import GlobalPlugin from './assets/plugins/GlobalPlugin.js';
 
-createApp(App).mount('#app')
+
+const app = createApp(App);
+app.use(GlobalPlugin);
+
+app.mount('#app')
