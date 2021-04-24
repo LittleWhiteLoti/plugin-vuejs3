@@ -26,7 +26,10 @@ GlobalPlugin.install = function(Vue, options) {
     // Give it a name
     // Assign to method in the file
     // All methods in this file are file contexted and the definitions can only be seen in this file
+    // In Vuejs2 it is namespaced in Vue.prototype.$myPlugin
+    // In Vuejs3 it is namespaced in Vue.config.globalProperties.$sayHello
     Vue.config.globalProperties.$sayHello = sayHello;
+    // Optionally you can still add it to the Vue instance with Vue.$sayHello
 
     // Syntax for directive
     // Define directive object with the lifecycle hooks you want to attach
